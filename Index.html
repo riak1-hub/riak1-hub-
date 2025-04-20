@@ -1,1 +1,89 @@
-# riak1-hub-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu-toggle {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .menu-toggle:hover {
+      background-color: #575757;
+    }
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .menu.hidden {
+      display: none;
+    }
+    .menu li {
+      margin: 0;
+    }
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    .menu li a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+    .search-button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .search-button:hover {
+      background-color: #575757;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu");
+
+      toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav aria-label="Main Navigation">
+    <button class="menu-toggle" aria-expanded="false">☰ Menu</button>
+    <ul class="menu">
+      <li><a href="#dcs_studio">Dcs_Studio</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#get_in_touch">Get In Touch</a></li>
+    </ul>
+    <button class="search-button" aria-label="Search">🔍 Search</button>
+  </nav>
+</body>
+</html>
